@@ -81,12 +81,24 @@ tinderUser.isLoggedIn=false
 // --------------------------------------------LEACTURE 19----------------------------------
 //FUNCTIONS AND PARAMETERS
 
-function add(num1,num2){
-    a=num1+num2
-    console.log(a);
-    
+// function add(num1,num2){ //parameters
+//     a=num1+num2
+//     return a;  
+// }
+// const Result=add(2,2); //arguments
+// console.log("Result",Result);
+
+function loginUserMessage(username){
+    if(username === undefined){
+        console.log("please enter a username");
+        return
+        
+    }
+    return `${username} just logged in`
 }
-add(2,2);
+console.log(loginUserMessage("hitesh"));
+console.log(loginUserMessage());
+
 
 
 
