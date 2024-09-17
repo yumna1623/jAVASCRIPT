@@ -81,6 +81,13 @@ tinderUser.isLoggedIn=false
 // --------------------------------------------LEACTURE 19----------------------------------
 //FUNCTIONS AND PARAMETERS
 
+function add(num1,num2){
+    a=num1+num2
+    console.log(a);
+    
+}
+add(2,2);
+
 
 
 // --------------------------------------------LEACTURE 20----------------------------------
