@@ -3,10 +3,10 @@
 
 // --------------------------------------------LEACTURE 17----------------------------------
 // const tinderUser=new Object()//singelton obj
-const tinderUser={}//non singleton obg
-tinderUser.id="123abc"
-tinderUser.name="yumna"
-tinderUser.isLoggedIn=false
+// const tinderUser={}//non singleton obg
+// tinderUser.id="123abc"
+// tinderUser.name="yumna"
+// tinderUser.isLoggedIn=false
 // console.log(tinderUser);
 
 // const regularUser={
@@ -162,10 +162,10 @@ tinderUser.isLoggedIn=false
 
 //3
 
-console.log(addone(2));//can access from here too 
-function addone(num) {
-    return num+1
-}
+// console.log(addone(2));//can access from here too 
+// function addone(num) {
+//     return num+1
+// }
 // console.log(addone(2));
 
 // or
@@ -179,9 +179,69 @@ function addone(num) {
 // --------------------------------------------LEACTURE 23----------------------------------
 //arrow function
 
+// const user ={
+//     username:"hitesh",
+//     price:999,
+//     welcomemsg:function (params) {
+//         console.log(`${this.username},welcome to website`);
+//         console.log(this);
+//     }
+// }
+// user.welcomemsg()//if i make this a comment and run below command
+// console.log(this);//now it will give {}
+
+// 2
+// --------------------------------------normal function
+// const chai1=function(){
+
+// }
+// -------------------------------------Basic arrow function =()=>{}
+
+// const addTwo = (n1,n2)=>     n1+n2          //this is fine implicit return
+// const addTwo = (n1,n2)=>     (n1+n2)        //when using () no need to use return keyword
+// const addTwo = (n1,n2)=>{                   //explicit return
+//     return n1+n2
+// }
+// const a =addTwo(1,1)
+// console.log(a);
+
 // --------------------------------------------LEACTURE 24----------------------------------
+// IIFE normal function
+// (function chai(params) {
+//     console.log("DB CONNECTED");
+// }) ();                          //this semicolon is must in between 2 iife
+
+// ----------------------------IIFE arrow function
+// ( chai2 = () =>{
+//     console.log("DB CONNECTED 2");
+// }) ();
+
+// ---------------------------------name IIFE
+// ( chai2 = (name) =>{
+//     console.log(`DB CONNECTED 2 ${name}`);
+// }) ('yumna');
+
+// ---------------------------------unname IIFE
+// ((name) =>{
+//     console.log(`DB CONNECTED 2 ${name}`);
+// }) ('yumna');
+
 
 // --------------------------------------------LEACTURE 25--------------------------------
+//callstack+execution context
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // --------------------------------------------LEACTURE 26--------------------------------
 
