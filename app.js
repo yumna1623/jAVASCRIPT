@@ -88,25 +88,101 @@ tinderUser.isLoggedIn=false
 // const Result=add(2,2); //arguments
 // console.log("Result",Result);
 
-function loginUserMessage(username){
-    if(username === undefined){
-        console.log("please enter a username");
-        return
+// function loginUserMessage(username){
+//     if(username === undefined){
+//         console.log("please enter a username");
+//         return
         
-    }
-    return `${username} just logged in`
-}
-console.log(loginUserMessage("hitesh"));
-console.log(loginUserMessage());
-
-
-
+//     }
+//     return `${username} just logged in`
+// }
+// console.log(loginUserMessage("hitesh"));
+// console.log(loginUserMessage());
 
 // --------------------------------------------LEACTURE 20----------------------------------
+//rest operator/spread
+// 1 
+// function canculateCartPrice(...num1){
+//         return num1
+// }
+// console.log(canculateCartPrice(200,400,500));
+
+// 2
+// anyobject is because function dont know whether api is coming or object is coming
+// const user={
+//     username:"yumna",
+//     prices:999
+// }
+// function handleObject(anyObject){
+//     console.log(`Username is ${anyObject.username} and price is${anyObject.price}`);
+// }
+// // handleObject(user)
+// //direct passing of obj
+// handleObject({
+//     username:"hitesh",
+//     price:199
+// })
+
+// 3
+//passing of aaray in function
+// const myNewArray = [200,400,100,600]
+// function returnSecondValue(getArray){
+//     return getArray[1]
+// }
+// console.log(returnSecondValue(myNewArray));
+
 // --------------------------------------------LEACTURE 21----------------------------------
+//scope
+// we can access var out of the scope and thats the problem
+// cant access let and const
+
 // --------------------------------------------LEACTURE 22----------------------------------
+// 1
+// function one(params) {
+//     const username="omer"
+
+//     function two(params) {
+//         const website="youtube"
+//         console.log(username);
+//     }
+//     // console.log(website);//cant access
+//     two()   
+// }
+// one()
+
+// 2
+// if (true) {
+//     const username="ayesha"
+//     if(username==="ayesha")
+//     {
+//         const website = "github"
+//         console.log(username+website);        
+//     }
+// }
+
+//3
+
+console.log(addone(2));//can access from here too 
+function addone(num) {
+    return num+1
+}
+// console.log(addone(2));
+
+// or
+
+// console.log(addtwo(2));//cant access from here
+// const addtwo=function (num) { //function/expression
+//     return num+2
+// }
+// console.log(addtwo(2));
+
 // --------------------------------------------LEACTURE 23----------------------------------
+//arrow function
+
 // --------------------------------------------LEACTURE 24----------------------------------
+
 // --------------------------------------------LEACTURE 25--------------------------------
+
 // --------------------------------------------LEACTURE 26--------------------------------
+
 // --------------------------------------------LEACTURE 27--------------------------------
