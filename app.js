@@ -228,9 +228,15 @@
 
 
 // --------------------------------------------LEACTURE 25--------------------------------
-//callstack+execution context
+//callstack + execution context
 
+// JavaScript Execution context
+// global EC =>this
+// Functinal EC
+// Eval EC
 
+// Memory Creation Phase
+// Ececution Phase
 
 
 
