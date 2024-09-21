@@ -247,15 +247,155 @@
 // --------------------------------------------LEACTURE 28--------------------------------
 
 // --------------------------------------------LEACTURE 29--------------------------------
-//for of
+//for of => will not work on objects
 
 // obj in arrays
 // [{},{},{}]
+
+// const arr = [1,2,3,4,5]
+// for (const num of arr) {
+//             console.log(num);
+// }
+
+// const greetings = "hello world"
+// for (const greet of greetings) {
+//     console.log(`each char is ${greet}`);
+    
+// }
+
 // --------------------------------------------LEACTURE 30--------------------------------
+//MAP
+
+// const myNum = [1,2,3,4,5,6,7,8,9,10]
+// const newNums=myNum.map((num)=>num+10)
+// console.log(newNums);
+
+// const map = new Map()
+// map.set('IN','India')
+// map.set('US','United States Of America')
+// console.log(map);
+
+// const map = new Map()
+// map.set('IN','India')
+// map.set('US','United States Of America')
+// for (const [key,value] of map) {
+//     console.log(key, ':-',value);
+// }
+
+// const myObject = {
+//     'game1':'NFS',
+//     'game2':'Spiderman'
+// }
+// for of wont work on obj// 
+// for (const [key,value] of myObject) {
+//     console.log(key,'-:',value);
+// }
+
+// const myObject = {
+//     js:'javascript',
+//     cpp:'c++'
+// }
+
+
+// for (const key in myObject) {
+//     //    console.log(myObject[key]);
+//     console.log(`${key} shortcut is for ${myObject[key]}`);
+    
+// }
+
+//------------------------------------FILTER
+// 1)
+// const myNums = [1,2,3,4,5,6,7,8,9,10]
+// const newnum=myNums.filter((num)=>
+//         num>4
+// )
+// console.log(newnum);
+
+// 2)
+// const myNums = [1,2,3,4,5,6,7,8,9,10]
+// const newnum=myNums.filter((num)=>{
+//     return num>4            
+//     //with curly braces it wil not return without return statement
+// })
+// console.log(newnum);
+
+// 3)
+// const myNums = [1,2,3,4,5,6,7,8,9,10]
+// const newnum=myNums.filter((num)=> (num>4) )
+// console.log(newnum);
+
+// const Books=[
+//     {title:'book one',genre:'Fiction',publish:1981,edition: 2000},
+//     {title:'book two',genre:'history',publish:1982,edition: 2001},
+//     {title:'book three',genre:'science',publish:1983,edition: 2002},
+//     {title:'book four',genre:'tragic',publish:1984,edition: 2003}
+// ]
+// const userbooks=Books.filter((bk)=>{
+//         return bk.genre==='tragic'
+// })
+// console.log(userbooks);
+
+// -----------------chaining
+
+// const myNum = [1,2,3,4,5,6,7,8,9,10]
+// const newNums=myNum.map((num)=> num * 10)
+//                     .map((num)=>num + 1)
+//                     .filter((num)=> num>=40)
+// console.log(newNums);
+
+// ----------------REDUCE
+// 1)
+// const myNum=[1,2,3]
+// const myTotal=myNum.reduce(function(acc,currval) {
+//     console.log(`acc:${acc} and currval: ${currval}`);
+    
+//     return acc+currval},3)
+//     console.log(myTotal);
+    
+// 2)
+// const myNum=[1,2,3]
+// const myTotal=myNum.reduce((acc,currval) => acc+currval,3)
+//     console.log(myTotal);
+
+const ShoppingCart = [
+    {
+        itemName:"js course",
+        price:100
+    },
+    {
+        itemName:"py course",
+        price:200
+    },
+    {
+        itemName:"cpp course",
+        price:400
+    },
+]
+const money =ShoppingCart.reduce((acc,item)=>acc+ item.price,0)
+console.log(money);
+
+
+
+
 // --------------------------------------------LEACTURE 31--------------------------------
 // --------------------------------------------LEACTURE 32--------------------------------
 // --------------------------------------------LEACTURE 33--------------------------------
 // --------------------------------------------LEACTURE 34--------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // --------------------------------------------LEACTURE 35--------------------------------
 // --------------------------------------------LEACTURE 36--------------------------------
 // --------------------------------------------LEACTURE 37--------------------------------
