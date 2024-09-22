@@ -388,8 +388,46 @@
 // --------------------------------------------LEACTURE 33--------------------------------
 //HOW TO SELECT DOCUMENT
 
-const parent = document.querySelector('.parent')
-        console.log(parent);
+{/* <div class="parent">
+            <div class="day">monday</div>
+            <div class="day">tuesday</div>
+            <div class="day">wednesday</div>
+            <div class="day">thursday</div>
+            <div class="day">friday</div> */}
+    //     </div>
+
+
+    //  <script>
+    //     // const parent = document.querySelector('.parent')
+    //     // console.log(parent);
+    //     // console.log(parent.children[0]);
+    //     {/* // console.log(parent.children[0].innerHTML); */}
+
+    //     {/* // for (let i = 0; i < parent.children.length; i++) { */}
+    //     //     console.log(parent.children[i].innerHTML);
+    //     //     parent.children[1].style.color="orange"
+    //     // }
+
+    //     //same
+    //     // console.log(parent.children[0]);
+    //     // console.log(parent.firstElementChild);
+    //     // console.log(parent.lastElementChild);
+
+    //     // const dayOne=document.querySelector('.day')
+    //     // console.log(dayOne);
+    //     // console.log(dayOne.parentElement);
+    //     // console.log(dayOne.nextElementSibling);
+
+    //     // console.log("nodes;-", parent.childNodes);
+
+    // -----------------------------------HOW TO CREATE AN ELEMENT
+    const div = document.createElement('div')
+    console.log(div);
+
+
+    const h1 = document.createElement('h1')
+    console.log(h1);
+    
 
 
 // --------------------------------------------LEACTURE 34--------------------------------
