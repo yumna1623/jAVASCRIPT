@@ -357,22 +357,22 @@
 // const myTotal=myNum.reduce((acc,currval) => acc+currval,3)
 //     console.log(myTotal);
 
-const ShoppingCart = [
-    {
-        itemName:"js course",
-        price:100
-    },
-    {
-        itemName:"py course",
-        price:200
-    },
-    {
-        itemName:"cpp course",
-        price:400
-    },
-]
-const money =ShoppingCart.reduce((acc,item)=>acc+ item.price,0)
-console.log(money);
+// const ShoppingCart = [
+//     {
+//         itemName:"js course",
+//         price:100
+//     },
+//     {
+//         itemName:"py course",
+//         price:200
+//     },
+//     {
+//         itemName:"cpp course",
+//         price:400
+//     },
+// ]
+// const money =ShoppingCart.reduce((acc,item)=>acc+ item.price,0)
+// console.log(money);
 
 
 // --------------------------------------------LEACTURE 31--------------------------------
@@ -380,28 +380,42 @@ console.log(money);
  
 // --------------------------------------------LEACTURE 32--------------------------------
 //DOM
-
-
+{/* <div class="bg-black">
+        <h1 id="title" class="heading">DOM LEARNING</h1>
+        <p>Lorem ipsum s ods consequatur qui iusto totam!</p>
+    </div> */}
 
 // --------------------------------------------LEACTURE 33--------------------------------
+//HOW TO SELECT DOCUMENT
+
+const parent = document.querySelector('.parent')
+        console.log(parent);
+
+
 // --------------------------------------------LEACTURE 34--------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // --------------------------------------------LEACTURE 35--------------------------------
 // --------------------------------------------LEACTURE 36--------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // --------------------------------------------LEACTURE 37--------------------------------
 // --------------------------------------------LEACTURE 38--------------------------------
 // --------------------------------------------LEACTURE 39--------------------------------
