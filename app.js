@@ -421,17 +421,73 @@
     //     // console.log("nodes;-", parent.childNodes);
 
     // -----------------------------------HOW TO CREATE AN ELEMENT
-    const div = document.createElement('div')
-    console.log(div);
+    // const div = document.createElement('div')
+    // console.log(div);
+    // div.className="divider"
+    // div.id=Math.round(Math.random()*10+1)
+    // div.id="ruler"
+    // div.innerHTML="my firset javascript code" //no
+    // const text=document.createTextNode("my firset javascript code") //yes
+    // div.appendChild(text)
+    // div.setAttribute("title","chai or code")
+    // div.style.backgroundColor="purple"
+    // div.style.color="white"
+    //-------attaching div to body--------
+    // document.body.appendChild(div)
+
+    // const h1 = document.createElement('h1')
+    // console.log(h1);
+    
+// --------------------------------------------LEACTURE 34--------------------------------
+//EDIT AND REMOVE ELEMENTS IN DOM
 
 
-    const h1 = document.createElement('h1')
-    console.log(h1);
+{/* <ul class="language">
+            <li>javascript</li>
+        </ul> */}
+    // ----------------------------
+
+    // function addLanguage(language){
+    //     const li=document.createElement('li')
+    //     li.innerHTML=`${language}`
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    // addLanguage("ruby")
+
+    // -------------------------------OPTIMIZE APPROACH-------
+    function addOPTILanguage(language) {
+        const li=document.createElement('li')
+        const text=document.createTextNode(language)
+        li.appendChild(text)
+        //or
+        // li.appendChild(document.createTextNode(language))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOPTILanguage("golang")
+    addOPTILanguage("python")
+    // ------------------------------------IF I HAVE TO CHANGE PYTHON INTO C++(best)
+
+    // 1)select the element you want to change
+    // 2)create a new element
+    // 3)change the text of that new element
+    // 4)replave with the element you select first
+    // const secLang=document.querySelector("li:nth-child(2)")
+    // secLang.innerHTML="c++"no
+    // const newli=document.createElement('li')
+    // newli.textContent="mojo"
+    // secLang.replaceWith(newli)
+    // console.log(secLang);
     
 
+// 2)
+//remove last element=>python
+const lastLang=document.querySelector('li:last-child')
+lastLang.remove()
 
-// --------------------------------------------LEACTURE 34--------------------------------
 // --------------------------------------------LEACTURE 35--------------------------------
+// -----------------------------PROJECT------------------------------------------------------
+
+
 // --------------------------------------------LEACTURE 36--------------------------------
 
 
