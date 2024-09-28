@@ -455,16 +455,16 @@
     // addLanguage("ruby")
 
     // -------------------------------OPTIMIZE APPROACH-------
-    function addOPTILanguage(language) {
-        const li=document.createElement('li')
-        const text=document.createTextNode(language)
-        li.appendChild(text)
-        //or
-        // li.appendChild(document.createTextNode(language))
-        document.querySelector('.language').appendChild(li)
-    }
-    addOPTILanguage("golang")
-    addOPTILanguage("python")
+    // function addOPTILanguage(language) {
+    //     const li=document.createElement('li')
+    //     const text=document.createTextNode(language)
+    //     li.appendChild(text)
+    //     //or
+    //     // li.appendChild(document.createTextNode(language))
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    // addOPTILanguage("golang")
+    // addOPTILanguage("python")
     // ------------------------------------IF I HAVE TO CHANGE PYTHON INTO C++(best)
 
     // 1)select the element you want to change
@@ -481,15 +481,62 @@
 
 // 2)
 //remove last element=>python
-const lastLang=document.querySelector('li:last-child')
-lastLang.remove()
+// const lastLang=document.querySelector('li:last-child')
+// lastLang.remove()
 
 // --------------------------------------------LEACTURE 35--------------------------------
 // -----------------------------PROJECT------------------------------------------------------
 
 
 // --------------------------------------------LEACTURE 36--------------------------------
+//EVENTS
+// =>event propogation
+// =>bubbling
 
+// ----------------------------------------------------------index-----------------------------------------
+{/* <h2>Amazing images</h2>
+        <div>
+        <ul id="images">
+            <li><img src="img/pexels-dejiprince-28231061.jpg"  id="girl"></li>
+            <li><img src="img/pexels-miami302-26793646.jpg"  id="dog" alt=""></li>
+            <li><img src="img/pexels-njeromin-20177407.jpg" id="plane"alt=""></li>
+            <li><img src="img/pexels-ruxandra-scutelnic-1470184397-28259733.jpg" id="cake"alt=""></li>
+            <li><img src="img/pexels-wwarby-21533286.jpg" id="bridge"alt=""></li>
+            <li><a style="color: rgb(73, 213, 231);" href="https://www.google.com/" id="google">google</a></li>
+        </ul>
+        </div> */}
+// ----------------------------------------------------------index-----------------------------------------
+
+//document.getElementById('images').addEventListener('onclick', function name(params) {},false)
+            // capturing start to end true
+            //bubbling down to upward false
+            // document.getElementById('images').addEventListener('click', function (e) {
+            //     console.log("clicked inside ul");
+            // },false)
+    
+            // document.getElementById('plane').addEventListener('click', function (e) {
+            //     console.log("clicked owl");
+            //     e.stopPropagation()
+            //     // ye for ex just slick owl print krega not
+            // },false)
+    
+            // document.getElementById('google').addEventListener('click',function (e) {
+            //     e.preventDefault()
+            //     e.stopPropagation()
+            //     console.log("google clicked");
+            // },false)
+
+// --------------------------
+// document.querySelector('#images').addEventListener('click',function(e){
+//     // console.log(e.target);will give you just images
+//     // console.log(e.target.parentNode); //will give you just li
+//     console.log(e.target.tagName); //will give you just li
+//     if (e.target.tagName === 'IMG') {
+//         // removeIt.parentNode.removeChild(removeIt)  //best way          
+//         let removeIt= e.target.parentNode
+//         removeIt.remove() //ok
+//     }
+// },false)
 
 
 
