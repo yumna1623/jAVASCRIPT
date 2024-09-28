@@ -2,6 +2,18 @@
 
 // console.log(num === 2);
 // also check the data type
+// ----------------------------------------------------------------------------------------
+
+// Use prompt to take input from the user
+// let userInput = prompt("Please enter something:");
+
+// if (userInput > 0 && userInput !== isNaN  ) {
+//     console.log("  your input number is "+userInput);
+// } else {
+//     console.log("please enter a valid number .");
+// }
+
+
 
 // --------------------------------------------LEACTURE 17----------------------------------
 // const tinderUser=new Object()//singelton obj
