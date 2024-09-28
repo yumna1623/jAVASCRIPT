@@ -1,7 +1,8 @@
 
 
 // console.log(num === 2);
-also check the data
+// also check the data type
+
 // --------------------------------------------LEACTURE 17----------------------------------
 // const tinderUser=new Object()//singelton obj
 // const tinderUser={}//non singleton obg
