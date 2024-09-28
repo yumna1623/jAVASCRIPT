@@ -9,7 +9,7 @@
     
 
    
-//     if(score>50 && score<60)
+//     if(score>50 || score<60)
 //     {
 //         console.log("  your input score is "+score);
 //         score++
