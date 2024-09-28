@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 // console.log(num === 2);
 // also check the data type
@@ -48,8 +47,6 @@
 // }
 
 // -----------------------------------------------------------------------------------------
-=======
->>>>>>> 48d28a122af5d975e50853df4a9e492ad8bdf50c
 // --------------------------------------------LEACTURE 17----------------------------------
 // const tinderUser=new Object()//singelton obj
 // const tinderUser={}//non singleton obg
