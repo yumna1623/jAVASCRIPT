@@ -587,16 +587,19 @@
 // --------------------------------------------LEACTURE 37--------------------------------
 //ASYNC
 // javascrip is synchronous(line by line execution)
-//single threaded language
+//single threaded language 
 
+// => BLOCKING CODE
+//    block the flow of program
+//    read file sync
 
-
-
-
-
-
+// => NON BLOCKING CODE
+//    do not block the execution
+//    read file async
 
 // --------------------------------------------LEACTURE 38--------------------------------
+// PROJECTS WITH ASYNC JS
+
 // --------------------------------------------LEACTURE 39--------------------------------
 // --------------------------------------------LEACTURE 40--------------------------------
 // --------------------------------------------LEACTURE 41--------------------------------
