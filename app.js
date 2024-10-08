@@ -602,9 +602,161 @@
 
 // --------------------------------------------LEACTURE 39--------------------------------
 // API request and V8 engine
+// JSON FORMATTER
 
 // --------------------------------------------LEACTURE 40--------------------------------
+// Promise syntax
+// const promiseOne=new Promise((resolve, reject) => {})
+// promiseThree.then().catch()
+
+    //what does this resolve and reject doing
+// ---------------------------------------------1
+// const promiseOne=new Promise((resolve, reject) => {
+//     // Do an async task
+//     //DB Calls, cryptography,network
+//     setTimeout(() => {
+//         console.log("async task is completed");
+//         resolve()
+//     }, 1000);
+
+//     })
+//     //it has a direction connection with resolve
+//     // but we did not connect the resolve with this the so connect to this to promise 
+//     //we write resolve() in promise 
+//     promiseOne.then(()=>{
+//         console.log("promise consumed");
+        
+//     })
+
+// ---------------------------------------------2
+
+// new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("async task  2 is completed");
+//             resolve()
+//         }, 1000);
+    
+//         }).then(()=>{
+//             console.log("Async 2 resolved");
+//         })
+        
+// ---------------------------------------------3
+
+// const promiseThree=new Promise((resolve, reject) => {
+//     setTimeout(() => {
+        
+//         resolve({userame:"chai",email:"chai@example.com"})
+//     }, 1000);
+//     })
+//     promiseThree.then((user)=>{
+//         console.log(user);
+                
+//             })
+// // ---------------------------------------------4-------use case of reject
+
+// const promiseFour=new Promise((resolve, reject) => {
+//     setTimeout(() => {
+        
+//         let error =false
+//         if (!error) {
+//             resolve({username:"hitesh",password:"123"})
+//         }
+//         else{
+//             reject("ERROR: something is wrong ")
+//         }
+//     }, 1000);
+//     })
+//     // chaining
+//     const username=promiseFour
+//             .then((user)=>{
+//                 console.log(user)
+//                 return user.username
+//             }).then((username)=>{
+//                 console.log(username);
+                
+//             }).catch((error)=>{
+//                 console.log(error);
+                
+//             }).finally(()=>{console.log("promise is either resolved or rejected");
+//             })
+
+// ---------------------------------------------
+
+// const promiseFive=new Promise((resolve, reject) => {
+//     setTimeout(() => {
+        
+//         let error =true
+//         if (!error) {
+//             resolve({username:"javascript",password:"123"})
+//         }
+//         else{
+//             reject("ERROR: JS is wrong ")
+//         }
+//     }, 1000);
+//     })
+    // async function consumepromiseFive(){
+        //     const response=await promiseFive
+        //     console.log(response);
+        
+    // }
+    // const consumepromiseFive = async () => {
+    //     try {
+    //         const response = await promiseFive;
+    //         console.log(response);
+    //     } catch (error) {
+    //         console.log(error);
+            
+    //     }
+    // };
+    // consumepromiseFive()    
+
+    // -------------------------------------or -------------------------------------
+    // chaining
+    // const username=promiseFive
+    //         .then((user)=>{
+    //             console.log(user)
+    //             return user.username
+    //         }).then((username)=>{
+    //             console.log(username);
+                
+    //         }).catch((error)=>{
+    //             console.log(error);
+                
+    //         }).finally(()=>{console.log("promise5 is either resolved or rejected");
+    //         })
+
+
+// --------------------try and catch format
+    // const getAllUser = async()=>{
+    //     try {
+    //         const response=await fetch('https://jsonplaceholder.typicode.com/user')
+    //         const data=await response.json()
+    //         console.log(data); 
+    //     } catch (error) {
+    //         console.log("error",error);
+            
+    //     }  
+    // }
+    // getAllUser()
+
+    // fetch('https://jsonplaceholder.typicode.com/user')
+    // .then((Response)=>{
+    //     return Response.json()
+    // })
+    // .catch((data)=>{
+    //     console.log(data);
+
+    // })
+
+
 // --------------------------------------------LEACTURE 41--------------------------------
+// FETCH
+
+
+
+
+
+
 // --------------------------------------------LEACTURE 42--------------------------------
 // --------------------------------------------LEACTURE 43--------------------------------
 // --------------------------------------------LEACTURE 44--------------------------------
