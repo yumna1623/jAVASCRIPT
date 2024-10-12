@@ -28,17 +28,8 @@
 
     
         <!-- <script src="app.js"></script> -->
-         <script>
-        document.querySelector('#images').addEventListener('click',function(e){
-            // console.log(e.target);will give you just images
-            // console.log(e.target.parentNode); //will give you just li
-            console.log(e.target.tagName); //will give you just li
-            if (e.target.tagName === 'IMG') {
-                // removeIt.parentNode.removeChild(removeIt)  //best way          
-                let removeIt= e.target.parentNode
-                removeIt.remove() //ok
-            }
-        },false) 
+         <script src="app.js">
+        
         
 
 
