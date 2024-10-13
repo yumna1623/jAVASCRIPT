@@ -1,14 +1,10 @@
-
-
 // console.log(num === 2);
 // also check the data type
 // ----------------------------------------------------------------------------------------
 // Asking user his score and to tell his grade
 // let score = prompt("Please enter something:");
 // if (score > 0 && score !== isNaN  ) {
-    
 
-   
 //     if(score>50 || score<60)
 //     {
 //         console.log("  your input score is "+score);
@@ -29,7 +25,7 @@
 //         console.log("your grade is A+");
 //     }
 //     else if(score>=81 && score<=100){
-//         if(score==100){ 
+//         if(score==100){
 //             console.log("  your input score is "+score);
 //             console.log(" your  score is "+score);
 //             console.log("your grade is that you top in class");
@@ -90,7 +86,6 @@
 
 // console.log(tinderUser.hasOwnProperty('isLoggedIn'));
 
-
 // --------------------------------------------LEACTURE 18----------------------------------
 // objects json formatter
 
@@ -129,7 +124,7 @@
 
 // function add(num1,num2){ //parameters
 //     a=num1+num2
-//     return a;  
+//     return a;
 // }
 // const Result=add(2,2); //arguments
 // console.log("Result",Result);
@@ -138,7 +133,7 @@
 //     if(username === undefined){
 //         console.log("please enter a username");
 //         return
-        
+
 //     }
 //     return `${username} just logged in`
 // }
@@ -147,7 +142,7 @@
 
 // --------------------------------------------LEACTURE 20----------------------------------
 //rest operator/spread
-// 1 
+// 1
 // function canculateCartPrice(...num1){
 //         return num1
 // }
@@ -192,7 +187,7 @@
 //         console.log(username);
 //     }
 //     // console.log(website);//cant access
-//     two()   
+//     two()
 // }
 // one()
 
@@ -202,13 +197,13 @@
 //     if(username==="ayesha")
 //     {
 //         const website = "github"
-//         console.log(username+website);        
+//         console.log(username+website);
 //     }
 // }
 
 //3
 
-// console.log(addone(2));//can access from here too 
+// console.log(addone(2));//can access from here too
 // function addone(num) {
 //     return num+1
 // }
@@ -272,7 +267,6 @@
 //     console.log(`DB CONNECTED 2 ${name}`);
 // }) ('yumna');
 
-
 // --------------------------------------------LEACTURE 25--------------------------------
 //callstack + execution context
 
@@ -306,7 +300,7 @@
 // const greetings = "hello world"
 // for (const greet of greetings) {
 //     console.log(`each char is ${greet}`);
-    
+
 // }
 
 // --------------------------------------------LEACTURE 30--------------------------------
@@ -332,7 +326,7 @@
 //     'game1':'NFS',
 //     'game2':'Spiderman'
 // }
-// for of wont work on obj// 
+// for of wont work on obj//
 // for (const [key,value] of myObject) {
 //     console.log(key,'-:',value);
 // }
@@ -342,11 +336,10 @@
 //     cpp:'c++'
 // }
 
-
 // for (const key in myObject) {
 //     //    console.log(myObject[key]);
 //     console.log(`${key} shortcut is for ${myObject[key]}`);
-    
+
 // }
 
 //------------------------------------FILTER
@@ -360,7 +353,7 @@
 // 2)
 // const myNums = [1,2,3,4,5,6,7,8,9,10]
 // const newnum=myNums.filter((num)=>{
-//     return num>4            
+//     return num>4
 //     //with curly braces it wil not return without return statement
 // })
 // console.log(newnum);
@@ -394,10 +387,10 @@
 // const myNum=[1,2,3]
 // const myTotal=myNum.reduce(function(acc,currval) {
 //     console.log(`acc:${acc} and currval: ${currval}`);
-    
+
 //     return acc+currval},3)
 //     console.log(myTotal);
-    
+
 // 2)
 // const myNum=[1,2,3]
 // const myTotal=myNum.reduce((acc,currval) => acc+currval,3)
@@ -420,110 +413,112 @@
 // const money =ShoppingCart.reduce((acc,item)=>acc+ item.price,0)
 // console.log(money);
 
-
 // --------------------------------------------LEACTURE 31--------------------------------
 // DOM(document obj model)
- 
+
 // --------------------------------------------LEACTURE 32--------------------------------
 //DOM
-{/* <div class="bg-black">
+{
+  /* <div class="bg-black">
         <h1 id="title" class="heading">DOM LEARNING</h1>
         <p>Lorem ipsum s ods consequatur qui iusto totam!</p>
-    </div> */}
+    </div> */
+}
 
 // --------------------------------------------LEACTURE 33--------------------------------
 //HOW TO SELECT DOCUMENT
 
-{/* <div class="parent">
+{
+  /* <div class="parent">
             <div class="day">monday</div>
             <div class="day">tuesday</div>
             <div class="day">wednesday</div>
             <div class="day">thursday</div>
-            <div class="day">friday</div> */}
-    //     </div>
+            <div class="day">friday</div> */
+}
+//     </div>
 
+//  <script>
+//     // const parent = document.querySelector('.parent')
+//     // console.log(parent);
+//     // console.log(parent.children[0]);
+//     {/* // console.log(parent.children[0].innerHTML); */}
 
-    //  <script>
-    //     // const parent = document.querySelector('.parent')
-    //     // console.log(parent);
-    //     // console.log(parent.children[0]);
-    //     {/* // console.log(parent.children[0].innerHTML); */}
+//     {/* // for (let i = 0; i < parent.children.length; i++) { */}
+//     //     console.log(parent.children[i].innerHTML);
+//     //     parent.children[1].style.color="orange"
+//     // }
 
-    //     {/* // for (let i = 0; i < parent.children.length; i++) { */}
-    //     //     console.log(parent.children[i].innerHTML);
-    //     //     parent.children[1].style.color="orange"
-    //     // }
+//     //same
+//     // console.log(parent.children[0]);
+//     // console.log(parent.firstElementChild);
+//     // console.log(parent.lastElementChild);
 
-    //     //same
-    //     // console.log(parent.children[0]);
-    //     // console.log(parent.firstElementChild);
-    //     // console.log(parent.lastElementChild);
+//     // const dayOne=document.querySelector('.day')
+//     // console.log(dayOne);
+//     // console.log(dayOne.parentElement);
+//     // console.log(dayOne.nextElementSibling);
 
-    //     // const dayOne=document.querySelector('.day')
-    //     // console.log(dayOne);
-    //     // console.log(dayOne.parentElement);
-    //     // console.log(dayOne.nextElementSibling);
+//     // console.log("nodes;-", parent.childNodes);
 
-    //     // console.log("nodes;-", parent.childNodes);
+// -----------------------------------HOW TO CREATE AN ELEMENT
+// const div = document.createElement('div')
+// console.log(div);
+// div.className="divider"
+// div.id=Math.round(Math.random()*10+1)
+// div.id="ruler"
+// div.innerHTML="my firset javascript code" //no
+// const text=document.createTextNode("my firset javascript code") //yes
+// div.appendChild(text)
+// div.setAttribute("title","chai or code")
+// div.style.backgroundColor="purple"
+// div.style.color="white"
+//-------attaching div to body--------
+// document.body.appendChild(div)
 
-    // -----------------------------------HOW TO CREATE AN ELEMENT
-    // const div = document.createElement('div')
-    // console.log(div);
-    // div.className="divider"
-    // div.id=Math.round(Math.random()*10+1)
-    // div.id="ruler"
-    // div.innerHTML="my firset javascript code" //no
-    // const text=document.createTextNode("my firset javascript code") //yes
-    // div.appendChild(text)
-    // div.setAttribute("title","chai or code")
-    // div.style.backgroundColor="purple"
-    // div.style.color="white"
-    //-------attaching div to body--------
-    // document.body.appendChild(div)
+// const h1 = document.createElement('h1')
+// console.log(h1);
 
-    // const h1 = document.createElement('h1')
-    // console.log(h1);
-    
 // --------------------------------------------LEACTURE 34--------------------------------
 //EDIT AND REMOVE ELEMENTS IN DOM
 
-
-{/* <ul class="language">
+{
+  /* <ul class="language">
             <li>javascript</li>
-        </ul> */}
-    // ----------------------------
+        </ul> */
+}
+// ----------------------------
 
-    // function addLanguage(language){
-    //     const li=document.createElement('li')
-    //     li.innerHTML=`${language}`
-    //     document.querySelector('.language').appendChild(li)
-    // }
-    // addLanguage("ruby")
+// function addLanguage(language){
+//     const li=document.createElement('li')
+//     li.innerHTML=`${language}`
+//     document.querySelector('.language').appendChild(li)
+// }
+// addLanguage("ruby")
 
-    // -------------------------------OPTIMIZE APPROACH-------
-    // function addOPTILanguage(language) {
-    //     const li=document.createElement('li')
-    //     const text=document.createTextNode(language)
-    //     li.appendChild(text)
-    //     //or
-    //     // li.appendChild(document.createTextNode(language))
-    //     document.querySelector('.language').appendChild(li)
-    // }
-    // addOPTILanguage("golang")
-    // addOPTILanguage("python")
-    // ------------------------------------IF I HAVE TO CHANGE PYTHON INTO C++(best)
+// -------------------------------OPTIMIZE APPROACH-------
+// function addOPTILanguage(language) {
+//     const li=document.createElement('li')
+//     const text=document.createTextNode(language)
+//     li.appendChild(text)
+//     //or
+//     // li.appendChild(document.createTextNode(language))
+//     document.querySelector('.language').appendChild(li)
+// }
+// addOPTILanguage("golang")
+// addOPTILanguage("python")
+// ------------------------------------IF I HAVE TO CHANGE PYTHON INTO C++(best)
 
-    // 1)select the element you want to change
-    // 2)create a new element
-    // 3)change the text of that new element
-    // 4)replave with the element you select first
-    // const secLang=document.querySelector("li:nth-child(2)")
-    // secLang.innerHTML="c++"no
-    // const newli=document.createElement('li')
-    // newli.textContent="mojo"
-    // secLang.replaceWith(newli)
-    // console.log(secLang);
-    
+// 1)select the element you want to change
+// 2)create a new element
+// 3)change the text of that new element
+// 4)replave with the element you select first
+// const secLang=document.querySelector("li:nth-child(2)")
+// secLang.innerHTML="c++"no
+// const newli=document.createElement('li')
+// newli.textContent="mojo"
+// secLang.replaceWith(newli)
+// console.log(secLang);
 
 // 2)
 //remove last element=>python
@@ -533,14 +528,14 @@
 // --------------------------------------------LEACTURE 35--------------------------------
 // -----------------------------PROJECT------------------------------------------------------
 
-
 // --------------------------------------------LEACTURE 36--------------------------------
 //EVENTS
 // =>event propogation
 // =>bubbling
 
 // ----------------------------------------------------------index-----------------------------------------
-{/* <h2>Amazing images</h2>
+{
+  /* <h2>Amazing images</h2>
         <div>
         <ul id="images">
             <li><img src="img/pexels-dejiprince-28231061.jpg"  id="girl"></li>
@@ -550,27 +545,28 @@
             <li><img src="img/pexels-wwarby-21533286.jpg" id="bridge"alt=""></li>
             <li><a style="color: rgb(73, 213, 231);" href="https://www.google.com/" id="google">google</a></li>
         </ul>
-        </div> */}
+        </div> */
+}
 // ----------------------------------------------------------index-----------------------------------------
 
 //document.getElementById('images').addEventListener('onclick', function name(params) {},false)
-            // capturing start to end true
-            //bubbling down to upward false
-            // document.getElementById('images').addEventListener('click', function (e) {
-            //     console.log("clicked inside ul");
-            // },false)
-    
-            // document.getElementById('plane').addEventListener('click', function (e) {
-            //     console.log("clicked owl");
-            //     e.stopPropagation()
-            //     // ye for ex just slick owl print krega not
-            // },false)
-    
-            // document.getElementById('google').addEventListener('click',function (e) {
-            //     e.preventDefault()
-            //     e.stopPropagation()
-            //     console.log("google clicked");
-            // },false)
+// capturing start to end true
+//bubbling down to upward false
+// document.getElementById('images').addEventListener('click', function (e) {
+//     console.log("clicked inside ul");
+// },false)
+
+// document.getElementById('plane').addEventListener('click', function (e) {
+//     console.log("clicked owl");
+//     e.stopPropagation()
+//     // ye for ex just slick owl print krega not
+// },false)
+
+// document.getElementById('google').addEventListener('click',function (e) {
+//     e.preventDefault()
+//     e.stopPropagation()
+//     console.log("google clicked");
+// },false)
 
 // --------------------------
 // document.querySelector('#images').addEventListener('click',function(e){
@@ -578,7 +574,7 @@
 //     // console.log(e.target.parentNode); //will give you just li
 //     console.log(e.target.tagName); //will give you just li
 //     if (e.target.tagName === 'IMG') {
-//         // removeIt.parentNode.removeChild(removeIt)  //best way          
+//         // removeIt.parentNode.removeChild(removeIt)  //best way
 //         let removeIt= e.target.parentNode
 //         removeIt.remove() //ok
 //     }
@@ -587,7 +583,7 @@
 // --------------------------------------------LEACTURE 37--------------------------------
 //ASYNC
 // javascrip is synchronous(line by line execution)
-//single threaded language 
+//single threaded language
 
 // => BLOCKING CODE
 //    block the flow of program
@@ -609,7 +605,7 @@
 // const promiseOne=new Promise((resolve, reject) => {})
 // promiseThree.then().catch()
 
-    //what does this resolve and reject doing
+//what does this resolve and reject doing
 // ---------------------------------------------1
 // const promiseOne=new Promise((resolve, reject) => {
 //     // Do an async task
@@ -621,11 +617,11 @@
 
 //     })
 //     //it has a direction connection with resolve
-//     // but we did not connect the resolve with this the so connect to this to promise 
-//     //we write resolve() in promise 
+//     // but we did not connect the resolve with this the so connect to this to promise
+//     //we write resolve() in promise
 //     promiseOne.then(()=>{
 //         console.log("promise consumed");
-        
+
 //     })
 
 // ---------------------------------------------2
@@ -635,28 +631,28 @@
 //             console.log("async task  2 is completed");
 //             resolve()
 //         }, 1000);
-    
+
 //         }).then(()=>{
 //             console.log("Async 2 resolved");
 //         })
-        
+
 // ---------------------------------------------3
 
 // const promiseThree=new Promise((resolve, reject) => {
 //     setTimeout(() => {
-        
+
 //         resolve({userame:"chai",email:"chai@example.com"})
 //     }, 1000);
 //     })
 //     promiseThree.then((user)=>{
 //         console.log(user);
-                
+
 //             })
 // // ---------------------------------------------4-------use case of reject
 
 // const promiseFour=new Promise((resolve, reject) => {
 //     setTimeout(() => {
-        
+
 //         let error =false
 //         if (!error) {
 //             resolve({username:"hitesh",password:"123"})
@@ -673,10 +669,10 @@
 //                 return user.username
 //             }).then((username)=>{
 //                 console.log(username);
-                
+
 //             }).catch((error)=>{
 //                 console.log(error);
-                
+
 //             }).finally(()=>{console.log("promise is either resolved or rejected");
 //             })
 
@@ -684,7 +680,7 @@
 
 // const promiseFive=new Promise((resolve, reject) => {
 //     setTimeout(() => {
-        
+
 //         let error =true
 //         if (!error) {
 //             resolve({username:"javascript",password:"123"})
@@ -694,48 +690,47 @@
 //         }
 //     }, 1000);
 //     })
-    // async function consumepromiseFive(){
-        //     const response=await promiseFive
-        //     console.log(response);
-        
-    // }
-    // const consumepromiseFive = async () => {
-    //     try {
-    //         const response = await promiseFive;
-    //         console.log(response);
-    //     } catch (error) {
-    //         console.log(error);
-            
-    //     }
-    // };
-    // consumepromiseFive()    
+// async function consumepromiseFive(){
+//     const response=await promiseFive
+//     console.log(response);
 
-    // -------------------------------------or -------------------------------------
-    // chaining
+// }
+// const consumepromiseFive = async () => {
+//     try {
+//         const response = await promiseFive;
+//         console.log(response);
+//     } catch (error) {
+//         console.log(error);
+
+//     }
+// };
+// consumepromiseFive()
+
+// -------------------------------------or -------------------------------------
+// chaining
 //     const username=promiseFive
 //             .then((user)=>{
 //                 console.log(user)
 //                 return user.username
 //             }).then((username)=>{
 //                 console.log(username);
-                
+
 //             }).catch((error)=>{
 //                 console.log(error);
-                
+
 //             }).finally(()=>{console.log("promise5 is either resolved or rejected");
 //             })
-
 
 // // --------------------try and catch format
 //     const getAllUser = async()=>{
 //         try {
 //             const response=await fetch('https://jsonplaceholder.typicode.com/user')
 //             const data=await response.json()
-//             console.log(data); 
+//             console.log(data);
 //         } catch (error) {
 //             console.log("error",error);
-            
-//         }  
+
+//         }
 //     }
 //     // getAllUser()
 
@@ -745,27 +740,25 @@
 //     })
 //     .then((data)=>{
 //         console.log(data);
-        
+
 //     })
 //     .catch((error)=>{
 //         console.log(error);
 
 //     })
 
-
 // --------------------------------------------LEACTURE 41--------------------------------
 // FETCH
 
 // --------------------------------------------LEACTURE 42--------------------------------
-// OOP 
+// OOP
 
 // --------------------------------------------LEACTURE 43--------------------------------
 //prototype
 //gave the access of this and new keyword
 
-// in prototype we get access of some methods 
-// we can change methods in protoype of our own 
-
+// in prototype we get access of some methods
+// we can change methods in protoype of our own
 
 // function multiplyBy5(num) {
 //      return num*5
@@ -777,12 +770,12 @@
 // console.log(multipleBy5.prototype); //empty{}
 
 // function createUser(username,score) {
-//     this.username=username 
+//     this.username=username
 //     this.score=score
 // }
 
 // createUser.prototype.increment=function () {
-//     this.score++;    
+//     this.score++;
 // }
 // createUser.prototype.printMe=function () {
 //     console.log(`score is ${this.score}`);
@@ -796,20 +789,20 @@
 // Here's what happens behind the scenes when the new keyword
 //  is used:
 
-// A new object is created: The new keyword initiates the 
+// A new object is created: The new keyword initiates the
 // creation of a new JavaScript object.
 
-// A prototype is linked: The newly created object gets linked to the prototype 
+// A prototype is linked: The newly created object gets linked to the prototype
 // property of the constructor function. This means that it has
 //  access to properties and methods defined on the constructor's prototype.
 
-// The constructor is called: The constructor function is 
-// 
-// called with the specified arguments and this is bound to the newly created object. 
+// The constructor is called: The constructor function is
+//
+// called with the specified arguments and this is bound to the newly created object.
 // If no explicit return value is specified from the constructor, JavaScript assumes this, the newly created object,
 //  to be the intended return value.
 
-// The new object is returned: After the constructor function has been 
+// The new object is returned: After the constructor function has been
 // called, if it doesn't return a non-primitive value (object, array, function, etc.),
 //  the newly created object is returned.
 // ---------------------------------------
@@ -819,9 +812,7 @@
 
 // console.log(myName.trueLength);
 
-
 // let myHeros = ["thor", "spiderman"]
-
 
 // let heroPower = {
 //     thor: "hammer",
@@ -883,7 +874,6 @@
 // "hitesh".trueLength()
 // "iceTea".trueLength()
 
-
 // --------------------------------------------LEACTURE 44--------------------------------
 // Call and this in javascript |
 
@@ -895,7 +885,7 @@
 
 // function createUser(username, email, password){
 //     SetUsername.call(this.username)
-   
+
 //     this.email = email
 //     this.password = password
 // }
@@ -903,9 +893,104 @@
 // const chai = new createUser("chai", "chai@fb.com", "123")
 // console.log(chai);
 
-
 // --------------------------------------------LEACTURE 45--------------------------------
-// Class constructor and static 
+// Class constructor and static
+
+// class User {
+//   constructor(username, email, password) {
+//     this.username = username;
+//     this.email = email;
+//     this.password = password;
+//   }
+//   encryptPassword() {
+//     return `${this.password}abc`;
+//   }
+//   changeUsername() {
+//     return `${this.username.toUpperCase()}`;
+//   }
+// }
+// const chai = new User("yumna", "yumna@gmail.com", "123");
+// console.log(chai.encryptPassword());
+// console.log(chai.changeUsername());
+
+// -------------------bts--------
+// function User(username, email, password){
+
+//         this.username = username;
+//         this.email = email;
+//         this.password = password;
+// }
+
+// User.prototype.encryptPassword  = function () {
+//         return `${this.password}abc`;
+// }
+// User.prototype.changeUsername  = function () {
+//     return `${this.username.toUpperCase()}`;
+// }
+
+// const tea=new User("tea","tea@gmail.com","123")
+// console.log(tea.encryptPassword());
+// console.log(tea.changeUsername());
+
+// const chai=new User("chai","chai@gmail.com","123")
+// console.log(chai.encryptPassword());
+// console.log(chai.changeUsername());
+
+// -----------------------------------
+
+// class User{
+//     constructor(username){
+//         this.username=username
+//     }
+//     LogMe(){
+//         console.log(`Username is ${this.username}`);
+        
+//     }
+// }
+// class Teacher extends User{
+//     constructor(username,email,password){
+//             super(username)
+//             this.email=email
+//             this.password=password
+//     }
+//     addCourse(){
+//         console.log(`new course is added by ${this.username}`);
+        
+//     }
+// }
+// const chai = new Teacher("chai","chai@gmail.com","123")
+// chai.addCourse()
+// console.log(chai instanceof User); //true
+
+// -----------------------------------------
+// static prop
+
+// class User {
+//     constructor(username){
+//         this.username=username
+//     }
+//     LogMe(){
+//         console.log(`Username is ${this.username}`);        
+//         }
+//         //static will stop
+//      creatId(){
+//         return `123`
+//     }
+// }
+// const hitesh  = new User("hitesh")
+// // console.log(hitesh.creatId());
+
+// class Teacher extends User {
+//     constructor(username,email){
+//         super(username)
+//         this.email = email
+//     }
+// }
+// const yum = new Teacher("yumna","email@")
+// yum.LogMe()
+// console.log(yum.creatId());
+// if you assign the value static to createId you can not access it
+
 
 
 // --------------------------------------------LEACTURE 46--------------------------------
