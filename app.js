@@ -993,8 +993,54 @@
 
 
 
+
 // --------------------------------------------LEACTURE 46--------------------------------
+// Bssind in javascript
+
+//for bind we need html file
+// ----------------------------
+{/* <button>Button Clicked</button> */}
+// -----------------------------
+// class React {
+//     constructor(){
+//         this.library = "React"
+//         this.server = "https://localhost:300"
+
+//         //requirement
+//         document
+//             .querySelector('button')
+//             .addEventListener('click', this.handleClick.bind(this))
+
+//     }
+//     handleClick(){
+//         console.log("button clicked");
+//         console.log(this.server);
+//     }
+// }
+
+// const app = new React()
+
+
 // --------------------------------------------LEACTURE 47--------------------------------
+//told us about some hidden things
+// const discriptor=Object.getOwnPropertyDescriptor(Math,"PI")
+// console.log(discriptor);
+
+const chai = {
+    name: "ginger chai",
+    price: 25,
+    isAvailable :true
+}
+// console.log(Object.getOwnPropertyDescriptor(chai));
+// will print undefined cause  this getOwnPropertyDescriptor
+// can be apply on properties or methods and chai is an object
+console.log(Object.getOwnPropertyDescriptor(chai,"name"));
+Object.defineProperty(chai,'name',{
+    writable:false
+})
+console.log(Object.getOwnPropertyDescriptor(chai,"name"));
+
+
 // --------------------------------------------LEACTURE 48--------------------------------
 // --------------------------------------------LEACTURE 49--------------------------------
 // --------------------------------------------LEACTURE 50--------------------------------
