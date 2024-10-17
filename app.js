@@ -1026,22 +1026,74 @@
 // const discriptor=Object.getOwnPropertyDescriptor(Math,"PI")
 // console.log(discriptor);
 
-const chai = {
-    name: "ginger chai",
-    price: 25,
-    isAvailable :true
-}
+// const chai = {
+//     name: "ginger chai",
+//     price: 25,
+//     isAvailable :true
+// }
 // console.log(Object.getOwnPropertyDescriptor(chai));
 // will print undefined cause  this getOwnPropertyDescriptor
 // can be apply on properties or methods and chai is an object
-console.log(Object.getOwnPropertyDescriptor(chai,"name"));
-Object.defineProperty(chai,'name',{
-    writable:false
-})
-console.log(Object.getOwnPropertyDescriptor(chai,"name"));
+// console.log(Object.getOwnPropertyDescriptor(chai,"name"));
+// Object.defineProperty(chai,'name',{
+//     writable:false
+// })
+// console.log(Object.getOwnPropertyDescriptor(chai,"name"));
 
 
 // --------------------------------------------LEACTURE 48--------------------------------
+// class User {
+//     constructor(email, password){
+//         this.email = email;
+//         this.password = password
+//     }
+
+//     get email(){
+//         return this._email.toUpperCase()
+//     }
+//     set email(value){
+//         this._email = value
+//     }
+//     // .-email property is private now
+
+//     get password(){
+//         return `${this._password}hitesh`
+//     }
+
+//     set password(value){
+//         this._password = value
+//     }
+// }
+
+// const hitesh = new User("h@hitesh.ai", "abc")
+// console.log(hitesh.email);
+ //------------------------------------------------------------------------------------------------
+ function User(email, password){
+    this._email = email;
+    this._password = password
+
+    Object.defineProperty(this, 'email', {
+        get: function(){
+            return this._email.toUpperCase()
+        },
+        set: function(value){
+            this._email = value
+        }
+    })
+    Object.defineProperty(this, 'password', {
+        get: function(){
+            return this._password.toUpperCase()
+        },
+        set: function(value){
+            this._password = value
+        }
+    })
+
+}
+
+const chai = new User("chai@chai.com", "chai")
+
+console.log(chai.email);
 // --------------------------------------------LEACTURE 49--------------------------------
 // --------------------------------------------LEACTURE 50--------------------------------
 // --------------------------------------------LEACTURE 51--------------------------------
