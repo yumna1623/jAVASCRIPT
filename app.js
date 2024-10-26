@@ -1,5 +1,5 @@
 
-
+// ------------------------------------
 //how to convert string into number
 
 // const strNum = "123.3a3"
