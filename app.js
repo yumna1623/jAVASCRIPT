@@ -695,8 +695,34 @@
 
 //             }).finally(()=>{console.log("promise is either resolved or rejected");
 //             })
+// ----------------------------------------------
+
+// const Num = 10.31646
+// console.log(Num);
+// console.log(Num.toFixed(2));
+
+// --------------------------------------------------
+// DATE
+// console.log(new Date());
+// console.log(new Date().getDay());
+// console.log(new Date().getMonth()+1); 
+// ----------------------------------------------------
+// Define a function that you want to run every second
+// function myFunction() {
+//   console.log("This message is logged every second.");
+// }
+
+// // Use setInterval to call the function every 1000 milliseconds (1 second)
+// const intervalId = setInterval(myFunction, 1000);
+
+// // Optional: To stop the interval after a certain time, you can use clearInterval
+// setTimeout(() => {
+//   clearInterval(intervalId);
+//   console.log("Interval cleared.");
+// }, 10000); // Stops the interval after 10 seconds
 
 // ---------------------------------------------
+
 
 // const promiseFive=new Promise((resolve, reject) => {
 //     setTimeout(() => {
