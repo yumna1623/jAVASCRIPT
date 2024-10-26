@@ -16,6 +16,18 @@
 // console.log(typeof +user); //number
 // -----------------------------------------------------------------------------------------
 //DATE CLASS
+// console.log(new Date());//current date
+//  console.log(new Date().getTime());//current milisecpnds from jan 1 1970
+
+// ---------------------------------------------------
+// const today = new Date().getTime()
+// const tomorrow = new Date("Oct 27  , 2024").getTime()
+// console.log(today);
+// console.log(tomorrow);
+// const msDiff =  tomorrow - today
+// const hours = msDiff / (1000*60*60)
+// console.log(hours.toFixed(1));
+//  ---------------------------------------------------
 
 //------------------------------------------------------------------------------------------
 // console.log(num === 2);
