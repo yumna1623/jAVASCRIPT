@@ -1,3 +1,23 @@
+
+
+//how to convert string into number
+
+// const strNum = "123.3a3"
+// console.log();
+// const newNum1 = Number(strNum)
+
+// const newNum2 = parseInt(strNum) // ignores letter
+
+// const newNum3 = parseFloat(strNum)
+// console.log(newNum3);
+
+// const user = prompt("enter your age")
+// console.log(typeof user); //string
+// console.log(typeof +user); //number
+// -----------------------------------------------------------------------------------------
+//DATE CLASS
+
+//------------------------------------------------------------------------------------------
 // console.log(num === 2);
 // also check the data type
 // ----------------------------------------------------------------------------------------
