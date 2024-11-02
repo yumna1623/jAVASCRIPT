@@ -5,6 +5,9 @@
 // Private methods cannot be overridden. They are not visible to subclasses, so you cannot change their behavior in derived classes.
 // you cannot create a subclass of a class that has a private constructor.
 // Top-level classes cannot be private; they must be either public or package-private.
+// static members of a class can be private.
+// 
+// 
 
 // ---------Default: 
 // only within the package. It cannot be accessed from outside the package.
@@ -21,6 +24,11 @@
 //--------- Public:
 //  can be access  everywhere. 
 // public methods can be overridden,must remain public or can be changed to a more restrictive access modifier (like protected).
+
+//--------- Static:
+// Static methods can be called without creating an instance of the class.
+// Static methods can access other static members of the class or its parent classes.
+// In your code, methodOfC() accesses the static variable s directly due to inheritance, which is why it works without instantiation.
 
 
 // If you make any class constructor private, you cannot create the instance of that class from outside the class.
