@@ -1,4 +1,14 @@
 
+
+
+
+
+
+
+
+
+
+
 // ------------------------------------
 //how to convert string into number
 
@@ -154,6 +164,23 @@
 // --------------------------------------------LEACTURE 19----------------------------------
 //FUNCTIONS AND PARAMETERS
 
+
+// syntax
+// function myFunction(parameter1,parameter2) {
+
+    // console.log("yumna");
+
+    // in function there is always a return value and 
+    // if you dont define any value in return then it will return 
+    // undefined by default
+// }
+
+// function greetUser(myName){ //parameters
+//    console.log("hello",myName);
+// }
+// greetUser("yumna")
+
+// myFunction(parameter1,parameter2)   
 // function add(num1,num2){ //parameters
 //     a=num1+num2
 //     return a;
