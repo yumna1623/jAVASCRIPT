@@ -1,5 +1,15 @@
 
+// Hoisting is a JavaScript behavior in which variable and function declarations are moved to the top of thei
+//  r containing scope during the compilation phase. 
+// This means that you can use variables and functions before you declare them in the code.
 
+// LET VARIABLE can not be have same name
+// using var it is possible (override)
+
+// console.log(myName);
+// var myName = "xyz"
+// myName = "abc"
+// // undefined
 
 
 
