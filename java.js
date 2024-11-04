@@ -30,8 +30,8 @@
 // Static methods can be called without creating an instance of the class.
 // Static methods can access other static members of the class or its parent classes.
 // In your code, methodOfC() accesses the static variable s directly due to inheritance, which is why it works without instantiation.
-
-
+//  Method Overriding shows dynamic polymorphism.
+// static methods cannot be overridden in Java.
 // If you make any class constructor private, you cannot create the instance of that class from outside the class.
 // class A{  
 //     private A(){}//private constructor  
