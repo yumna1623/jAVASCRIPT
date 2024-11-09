@@ -47,7 +47,10 @@
 
 // First constructor is invoked if we have instant initializer block compiler will copy that and paste it to constructopr so 
 // first thing that invoke in java is CONSTRUCTOR
-// 
+// Note: The java compiler copies the code of instance initializer block in every constructor.
+// 1=>PARENT CLASS CONSTRUCTOR
+// 2=>INSTANT BLOCK
+// 3=>CHILD CONSTRUCTOR
 // Subclasses do not inherit constructors from their parent classes.
 //  super() is added in each class constructor automatically by compiler if there is no super() or this().
 // class Bike{
