@@ -31,7 +31,7 @@
 // Static methods can access other static members of the class or its parent classes.
 // In your code, methodOfC() accesses the static variable s directly due to inheritance, which is why it works without instantiation.
 //  Method Overriding shows dynamic polymorphism.
-// static methods cannot be overridden in Java.
+// static methods cannot be overridden.
 // If you make any class constructor private, you cannot create the instance of that class from outside the class.
 // class A{  
 //     private A(){}//private constructor  
@@ -43,13 +43,21 @@
 //      }  
 //     } 
 
-// ----------------------------------------------INHERITENCE----------------------------------------
+// ---------------------------------------------------------------INHERITENCE----------------------------------------
 
+// First constructor is invoked if we have instant initializer block compiler will copy that and paste it to constructopr so 
+// first thing that invoke in java is CONSTRUCTOR
+// 
 // Subclasses do not inherit constructors from their parent classes.
-// Each class must define its own constructors.
+//  super() is added in each class constructor automatically by compiler if there is no super() or this().
+// class Bike{
+//    Bike(){
+//   super()
+//       } 
+// } 
 // Static members are also inherited to sub classes.
 
-// ----------------------------------------------ABSTRACTION----------------------------------------
+// -----------------------------------------------------------------ABSTRACTION----------------------------------------
 
 
 // abstract methods can not be static.
@@ -60,9 +68,11 @@
 // 
 // 
 // 
+// -----------------------------------------------------------------POLYMORPHISM------------------------------------
 
 
-// ----------------------------------------------INTERFACE----------------------------------------
+
+// ----------------------------------------------------------------INTERFACE----------------------------------------
 
 // Methods are public AND ABSTRACT by default. You cannot use access modifiers other than public.
 // All fields in an INTERFACE are implicitly public, static, and final. This means they are constants and cannot be modified.
