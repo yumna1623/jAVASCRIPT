@@ -1,22 +1,57 @@
 
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// onMouseover
+
+// when we hover on picture it willl change the picture
+  
+  <!-- <img src="new/cat1.jpeg" alt="" onmouseover="console.log('on mouse over');"> -->
+  <!-- <img src="new/cat1.jpeg" alt="" onmouseover='changeImg()'> -->
+  <!-- <p id="img"></p> -->
+ <img src="new/before.jpeg" alt="" id="img" onmouseover='changeImg("new/after.jpeg")'>
+----
+ function changeImg(src) {
+  // console.log("function called");
+  // const ans=document.getElementById("img").innerHTML = "function called"
+
+  const ImageElement = document.getElementById("img"); 
+  ImageElement.src = src;
+ ImageElement.style.width="50px";
+ ImageElement.style.height="50px";
+}
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// by doing this we get all those elements having tagname = p
+const allParagraph = document.getElementsByTagName("p");
+console.log(allParagraph);
+console.log(allParagraph[2].innerHTML);
+const newpara = allParagraph[0].innerHTML= "changed Paragraph."
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // -------------------------------------------------------------On Click/On Submit/-----log the value of username in browse------------------------------------------------------------------
 // on submit only work when you click on submit button
 
-//   <div class="con">
+// when you enter email and password it will gonna print welcome and email on console
+ <div class="con">
 
-//     <form action="#" onsubmit='handleLogin()' >
-//         <input id="username" class="in"  type="text" placeholder="Enter Username"><br>
-//         <input id="password"class="in"  type="password" placeholder="Enter Password"><br>
-//         <input class="in" type="submit" class="btn btn-success"><br>
-//         <a href="#" onclick="console.log('Forgot passwoerd');">Forgot passwoerd</a>
+    <form action="#" onsubmit='handleLogin()' >
+        <input id="username" class="in"  type="text" placeholder="Enter Username"><br>
+        <input id="password"class="in"  type="password" placeholder="Enter Password"><br>
+        <input class="in" type="submit" class="btn btn-success"><br>
+        <a href="#" onclick="console.log('Forgot passwoerd');">Forgot passwoerd</a>
+        <p id="y"></p>
 
-//     </form>
-//   </div>
-// ------
-//     function handleLogin(){
-//     console.log(document.getElementById("username").value);
-// }
+    </form>
+  </div>
 
+function handleLogin(){
+      // let a =(document.getElementById("username").value);
+      document.getElementById("y").innerHTML = "Welcome!";
+
+  }
+  // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 // ---------------------------------------------------------log the value of password in browser----------------------------------------------------------------------------
