@@ -1,3 +1,5 @@
+DOM (DOCMENT OBJECT MODEL)
+
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // onMouseover
@@ -20,8 +22,8 @@
 }
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 // by doing this we get all those elements having tagname = p
+
 const allParagraph = document.getElementsByTagName("p");
 console.log(allParagraph);
 console.log(allParagraph[2].innerHTML);
@@ -29,11 +31,17 @@ const newpara = allParagraph[0].innerHTML= "changed Paragraph."
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // when we want specific div p tag
+
 function changeStyle() {
   const divElement = document.getElementById("div-1")
   const paraInsideDiv = divElement.getElementsByTagName('p') 
   console.log(paraInsideDiv);
+
+  for (let i = 0; i < paraInsideDiv.length; i++) {
+    paraInsideDiv[i].style.color="green"
+  }
 }
+
 changeStyle()
 -------------
     <p>paragraph outside div</p>
