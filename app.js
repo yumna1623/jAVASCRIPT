@@ -28,7 +28,23 @@ console.log(allParagraph[2].innerHTML);
 const newpara = allParagraph[0].innerHTML= "changed Paragraph."
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// when we want specific div p tag
+function changeStyle() {
+  const divElement = document.getElementById("div-1")
+  const paraInsideDiv = divElement.getElementsByTagName('p') 
+  console.log(paraInsideDiv);
+}
+changeStyle()
+-------------
+    <p>paragraph outside div</p>
+<div id="div-1">
+  <p>paragraph1 inside div</p>
+  <p>paragraph2 inside div</p>
+</div>
+  console will be 2
+
+  
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------On Click/On Submit/-----log the value of username in browse------------------------------------------------------------------
 // on submit only work when you click on submit button
