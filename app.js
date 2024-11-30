@@ -1,4 +1,56 @@
-DOM (DOCMENT OBJECT MODEL)
+// DOM (DOCMENT OBJECT MODEL)
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// DOCUMENT IS FIRST AND ROOT LEVEL
+
+document has 2 child 
+DocumentType
+html
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//HOW TO SET ATTRIBUTE
+  const div = document.getElementById("p-inside-div")
+console.log(div.setAttribute("class","newclassin-css-file"));
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TODO LIST
+function Add() {
+    const input = document.getElementById("user-value")
+    const div = document.getElementById("todo-div")
+
+    const newP = document.createElement("li")
+    newP.innerText = input.value 
+
+    const deletebtn = document.createElement("button")
+    deletebtn.innerText = "X"
+    deletebtn.style.marginLeft = "10px";
+    deletebtn.onclick = function () {
+        div.removeChild(newP)
+    }
+
+    newP.appendChild(deletebtn)
+    div.append(newP)
+    input.value = ""
+
+}
+function Delete() {
+    const deleteopt = document.getElementById("todo-div") 
+    deleteopt.innerHTML = " "
+}
+
+function Delete() {
+    const deleteopt = document.getElementById("todo-div") 
+    deleteopt.innerHTML = " "
+}
+---------------------------------------------------------
+ <h1>todo</h1>
+        <input type="text" id="user-value" >
+        <div id="todo-div"></div>
+        <button onclick="Add()" >Add</button>
+        <button onclick="Delete()">Delete</button>
+
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -10,7 +62,7 @@ DOM (DOCMENT OBJECT MODEL)
   <!-- <img src="new/cat1.jpeg" alt="" onmouseover='changeImg()'> -->
   <!-- <p id="img"></p> -->
  <img src="new/before.jpeg" alt="" id="img" onmouseover='changeImg("new/after.jpeg")'>
-----
+--------------------------------
  function changeImg(src) {
   // console.log("function called");
   // const ans=document.getElementById("img").innerHTML = "function called"
@@ -22,9 +74,10 @@ DOM (DOCMENT OBJECT MODEL)
 }
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// by doing this we get all those elements having tagname = p
+// by doing this we get all those elements having tagname = p and this is array like3
 
 const allParagraph = document.getElementsByTagName("p");
+
 console.log(allParagraph);
 console.log(allParagraph[2].innerHTML);
 const newpara = allParagraph[0].innerHTML= "changed Paragraph."
