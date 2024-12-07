@@ -137,43 +137,47 @@ function handleLogin(){
 //     </form>
 // --------
 // const UserInfo=[]
-// function handleLogin(){
-//     UserInfo.push(document.getElementById("password").value);
-//     console.log(UserInfo);
-// }
+function handleLogin(){
+    UserInfo.push(document.getElementById("password").value);
+    console.log(UserInfo);
+}
 
 
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------
-//  <h1>Welcome</h1>
-//   <div class="con">
-//     <h3>Google Form</h3>
-//     <form action="#" onsubmit='handleLogin()' >
-//         <input id="username" class="in"  type="text" placeholder="Enter Username"><br>
-//         <input id="password"class="in"  type="password" placeholder="Enter Password"><br>
-//         <input class="in" type="submit" class="btn btn-success"><br>
-//         <a href="#" onclick="console.log('Forgot passwoerd');">Forgot passwoerd</a><br>
-//         <p>username</p>
-//         <p id="user"></p>
-//     </form>
-//   </div>
+ <h1>Welcome</h1>
+  <div class="con">
+    <h3>Google Form</h3>
+    <form action="#" onsubmit='handleLogin()' >
+        <input id="username" class="in"  type="text" placeholder="Enter Username"><br>
+        <input id="password"class="in"  type="password" placeholder="Enter Password"><br>
+        <input class="in" type="submit" class="btn btn-success"><br>
+        <a href="#" onclick="console.log('Forgot passwoerd');">Forgot passwoerd</a><br>
+        <p>username</p>
+        <p id="user"></p>
+    </form>
+  </div>
 // -------------------
-//     const UserInfo=[]
+const UserInfo=[]
 
-// function handleLogin(){
-//     const username = document.getElementById("username").value
-//     const password = document.getElementById("password").value
-//   if (password.length>=6 || password.length<=6) {
-//     console.log("Please enter a 6 digit password");
-//   }
-//   else{
-//     UserInfo.push(username)
-//     UserInfo.push(password)
-//     console.log(UserInfo);
-//   }
-//     const showUserName = document.getElementById("user")
-//     showUserName.innerHTML =` Welcome ${user}`
-// }
+function handleLogin(){
+    const username = document.getElementById("username").value
+    const password = document.getElementById("password").value
+  if (password.length!==6) {
+    console.log("Please enter a 6 digit password");
+  }
+  else{
+    UserInfo.push(username)
+    UserInfo.push(password)
+    console.log(UserInfo);
+  }
+  forgot(){
+    document.getElementById("forgot").style.display = "none";
+    document.getElementById("reset").style.display = "block";
+  }
+    const showUserName = document.getElementById("user")
+    showUserName.innerHTML =` Welcome ${username}`
+}
 
  
 
