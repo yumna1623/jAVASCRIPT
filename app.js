@@ -35,11 +35,6 @@ function Delete() {
     const deleteopt = document.getElementById("todo-div") 
     deleteopt.innerHTML = " "
 }
-
-function Delete() {
-    const deleteopt = document.getElementById("todo-div") 
-    deleteopt.innerHTML = " "
-}
 ---------------------------------------------------------
  <h1>todo</h1>
         <input type="text" id="user-value" >
