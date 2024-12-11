@@ -84,45 +84,75 @@ function PlayButton({message,children}) {
             onClick={handleClick}>{children}</button>
     );
 }
-
 export default PlayButton;
 // ------------------
 <div>    
        <PlayButton  message=" hi play">play</PlayButton>      
        <PlayButton  message="  pause ">pause</PlayButton>      
 </div>
+// ------------------
+  import './Video.css';
+function Video({title,channel="yumna",views,time,verified,children}) {    
+  return (
+    <>
+    <div className='container'>
+    <div className='pic'>
+      <img src="https://th.bing.com/th/id/R.0a94687daa63e00e0ed5856b0d64a929?rik=5lNY3n6PQqL4ew&pid=ImgRaw&r=0" alt="Katherine Johnson" />
+      <div className='title'> {title} </div>
+      <div className='channel'> {channel} {verified? '✅':null} </div>
+      <div className='views'> {views} views <span>.</span>{time}</div>
+      </div>
+      <div>
+      {children}
+        </div>
+    </div>
+      </>
+  );
+}
+export default Video;
 ---------------------------------------------------------------------------------------------------------------------------------
 import Video from "./components/Video";
 import "./App.css";
-import videos from './data/thumbnail'
+import videos from "./data/thumbnail";
 import PlayButton from "./components/PlayButton";
+import Counter from "./components/Counter";
 
 function App() {
   return (
     <div className="App">
-        {
-            videos.map(video=><Video
-                key={video.id}
-                title={video.title}
-                views={video.views}
-                time={video.time}
-                channel={video.channel}
-                verified={video.verified}
-              ></Video>)
-        }
-        <div>    
-            <PlayButton  onClick = {()=>console.log('play')}>play</PlayButton>      
-            <PlayButton  onClick = {()=>alert('pause')}>pause</PlayButton>      
-        </div>
+      {videos.map((video) => (
+        <Video
+          key={video.id}
+          title={video.title}
+          views={video.views}
+          time={video.time}
+          channel={video.channel}
+          verified={video.verified}
+        >
+          <PlayButton
+            onPlay={() => console.log("play",video.title)}
+            onPause={() => console.log("pause",video.title)} >
+            {video.title}
+          </PlayButton>
+        </Video>
+      ))}
+    <Counter></Counter>
     </div>
   );
 }
 export default App;
 ------------------
-  import './PlayButton.css';
-function PlayButton({children,onClick}) {
-    function handleClick(){
-        onClick();
+import './PlayButton.css';
+function PlayButton({children,onPause,onPlay}) {
+    let playing = false;
+    function handleClick(e){
+        if(playing){
+            onPause()
+        }
+        else{
+          onPlay();
+        }
+        playing = !playing
     }
     return (
         <button
@@ -131,16 +161,17 @@ function PlayButton({children,onClick}) {
             onClick={handleClick}>{children}</button>
     );
 }
+
 export default PlayButton;
 
-----------------------------------------------STATE UNSTATE / HOOKS----------------------------------------
+-------------------------------------------------------STATE UNSTATE / HOOKS-------------------------------------------------
 import { useState } from "react";
 function Counter() {
     const [number,setNumber] = useState(0);
     function handleClick(e) {
         e.stopPropagation();
         setTimeout(()=>{
-            setNumber(number+1); 
+            setNumber(number=>number+1); 
         },2000)
         console.log(number);
     }
@@ -151,22 +182,125 @@ function Counter() {
         </>
     )
 }
+------------------------
 export default Counter;
----------------------------------------------------------------------------------------------------------
+------------------------
+  import { useState } from 'react';
+import './PlayButton.css';
+function PlayButton({children,onPause,onPlay}) {
+    const [playing,setPlaying] = useState(false);
+    function handleClick(e){
+        if(playing){
+            onPause()
+        }
+        else{
+            onPlay();
+        }
+         setPlaying(!playing);
+    }
+    return (
+        <button
+            type="button"
+            className="btn btn-warning custom-hover"
+            onClick={handleClick}> {children} : {playing? '⏯' : '⏸'} </button>
+    );
+}
+----------------
+export default PlayButton;
+----------------
+  import Video from "./components/Video";
+import "./App.css";
+import videos from "./data/thumbnail";
+import PlayButton from "./components/PlayButton";
+import Counter from "./components/Counter";
 
-----------------------------------------------------------------------------------------------------------
+function App() {
+  return (
+    <div className="App">
+      {videos.map((video) => (
+        <Video
+          key={video.id}
+          title={video.title}
+          views={video.views}
+          time={video.time}
+          channel={video.channel}
+          verified={video.verified}
+        >
+          <PlayButton
+            onPlay={() => console.log("play",video.title)}
+            onPause={() => console.log("pause",video.title)} >
+            {video.title}
+          </PlayButton>
+        </Video>
+      ))}
+    <Counter></Counter>
+    </div>
+  );
+}
+export default App;
+----------------------------------------------------------------USESTATE------------------------------------------------------------------------------
+import Video from "./components/Video";
+import "./App.css";
+import videoDB from "./data/thumbnail";
+import PlayButton from "./components/PlayButton";
+import Counter from "./components/Counter";
+import { useState } from "react";
 
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------
-// ----------------------------------------------------------------------------------------------------------
-// ----------------------------------------------------------------------------------------------------------
-// ----------------------------------------------------------------------------------------------------------
-// ----------------------------------------------------------------------------------------------------------
-// ----------------------------------------------------------------------------------------------------------
-// ----------------------------------------------------------------------------------------------------------
+function App() {
+    const [videos,setVideos] = useState(videoDB)
+  return (
+    <div className="App">
+        <div>
+            <button onClick={()=>{
+                setVideos([...videos,{
+                    title:" MOngoDB Tutorial",
+                    views:"100k",
+                    time:"1 month ago ",
+                    channel:"lemon Smasher ",
+                    verified: false               
+                 }]);
+            }}>Add Video</button>
+        </div>
+      {videos.map((video) => (
+        <Video
+          key={video.id}
+          title={video.title}
+          views={video.views}
+          time={video.time}
+          channel={video.channel}
+          verified={video.verified}
+        >
+          <PlayButton
+            onPlay={() => console.log("play",video.title)}
+            onPause={() => console.log("pause",video.title)} >
+            {video.title}
+          </PlayButton>
+        </Video>
+      ))}
+    <Counter></Counter>
+    </div>
+  );
+}
+export default App;
+------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
