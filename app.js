@@ -1,6 +1,58 @@
-// DOM (DOCMENT OBJECT MODEL)
+// SPREAD OPERATOR
+const handle = (...args) => {
+//     console.log(Math.max(...args));
+// }
+// handle(1,2,3,4)
+    ---------------
+        const obj = {
+        name: "qurat",
+        age:2
+    }
+    
+    // how to copy obj 1 in obj 2
+    const obj2 = {
+            ...obj
+        }
+//  --------------------------------------------------------------------------REST OPERATOR--------------------------------------------------------------------------------------------------------------------------------
+const user = {
+    lastName: "John Doe",
+    lastName:"nasir",
+    password: "1234",
+    confirmPassword: "1234",
+    email:"yumnanasir@gmail.com"
+}
+// i want to send all the values in backend except for confirm password value
 
+const handlesignup = () => {
+    const firstName = document.getElementById("firstName").value;
+    const lastName = document.getElementById("lastName").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+
+    // Check if the required fields are not empty
+    if (firstName !== "" && lastName !== "" && email !== "" && password !== "" && confirmPassword !== "") {
+        // Create the user object
+        const user = {
+            firstName,
+            lastName,
+            email,
+            password,
+            confirmPassword  // This will be excluded later
+        };
+
+        // Destructure to exclude confirmPassword
+        const { confirmPassword, ...rest } = user; // `rest` will contain the user data excluding confirmPassword
+
+        // Log the rest of the user object (without confirmPassword)
+        console.log(rest);
+
+        // Send the `rest` object to the backend, excluding confirmPassword
+    }
+};
 // --------------------------------------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------------------------
+// DOM (DOCMENT OBJECT MODEL)
 // --------------------------------------------------------------------------------------------------------------------------------------
 // -------------------------------------------------------------------------------SCOPING VARIABLES---------------------------------------
 // functional scope 
