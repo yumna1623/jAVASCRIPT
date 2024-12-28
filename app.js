@@ -1,10 +1,32 @@
 
+// const array = [1,2]
+// array method
 
+//----------------------------------------------------------------- map(provide new array)-------------------------------------------------------------------------------------
+// if we are returning a value in a function then
+//  its imp to make a new var and store in that
+//   var so that return value can store in it
 
+// const newArr = array.map((item)=>{
+//     return item*2;
+// })
+// console.log(array);
+// console.log(newArr);
 
+// ----------------------------------------------------------------foreach(not change original array)---------------------------------------------------------------------------
+// array.forEach((item,i)=>{
+//     console.log(item,i);
+// })
 
+// ----------------------------------------------------------------filter(provide new array)--------------------------------------------------------------------------------------
+// const array = [1,2,3,25,10,15]
 
-// SPREAD OPERATOR
+// const filteredArray = array.filter((item)=>{
+//     return item*10;
+// })
+// console.log(filteredArray);
+
+// ---------------------------------------------------------------// SPREAD OPERATOR------------------------------------------------------------------------------------------------
 const handle = (...args) => {
 //     console.log(Math.max(...args));
 // }
