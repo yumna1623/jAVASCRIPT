@@ -1,8 +1,107 @@
+--------------------------------------------------------------------------------------------------------------------------------------
+  <h1>Users</h1>
+    <div id="main">
+        <p id="loader">Loading...</p>
+    </div>
+-----------------------------
+    *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    margin: auto;
+}
+h1{
+    margin-left: 65px;
+}
+#main{
+    display: flex;
+    gap: 20px;   
+    margin-top: 60px; 
+    margin-left: 60px;
+}
+.user{
+    display: flex;
+    width: 185px;
+    height: 130px;
+    background-color: rgb(174, 219, 255);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+}
+.img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+.p-1{
+    font-size: 14px;
+   font-weight: bold;
+}
+.p-2{
+    font-size: 10px;
+}
+-----------------
+    const users = [
 
+    {
+        name:"Qurat",
+        occupation:"Software Engineer",
+        streak:true,
+        profileImage:"https:images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D"
+    },
+    {
+        name:"Fatima ",
+        occupation:"ML Engineer",
+        streak:true,
+        profileImage:"https://plus.unsplash.com/premium_photo-1661476096004-c6157d87ef9b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        name:"Fahad ",
+        occupation:"ML Engineer",
+        streak:true,
+        profileImage:"https://media.istockphoto.com/id/922664652/photo/portrait-of-mid-adult-businessman-wearing-glasses-and-looking-at-camera.webp?a=1&s=612x612&w=0&k=20&c=P-WbX2XRdjz-DBQqR6KjK38hrnNkDc37UoEcWlewGAc="
+    },
+    {
+        name:"Omer",
+        occupation:"Cloud Engineer",
+        streak:true,
+        profileImage:"https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+
+];
+function getUsers() {
+
+    const main  = document.getElementById("main")
+
+      setTimeout(() => {
+        users.forEach((item)=>{
+            const div  =  document.createElement("div")
+            div.classList.add("user")
+            main.append(div)
+
+            const img = document.createElement("img")
+            img.classList.add("img")
+            img.src = item.profileImage;
+            div.append(img);
+    
+            const div2 =  document.createElement("div");
+            const p1 =  `<p clss="p-1">${item.name} </p> 
+                         <p class="p-2">${item.occupation}</p>`
+            div2.innerHTML = p1
+            div.append(div2)
+        });
+        document.getElementById("loader").innerHTML = " ";
+      }, 2000);
+}
+getUsers()
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------- map(provide new array)-----------------------------------------------------------------------------------------------
 // const array = [1,2]
 // array method
-
-//----------------------------------------------------------------- map(provide new array)-------------------------------------------------------------------------------------
 // if we are returning a value in a function then
 //  its imp to make a new var and store in that
 //   var so that return value can store in it
