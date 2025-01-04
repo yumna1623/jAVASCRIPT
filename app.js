@@ -1,3 +1,62 @@
+---------------------------------------------------------------PROMISES----------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
+1. Promises are objects that represent an operation that hasn't completed yet, but is expected to complete in the future.
+2. Promises have three possible states: pending, fulfilled, and rejected.
+
+let promise = new Promise(function(resolve, reject) {
+    let complete = true;  
+    if(complete){
+        resolve("i am fulfilled");
+    }
+    else{
+        reject("i am rejected");
+    }
+    })
+    console.log(promise);
+
+// ------------------------------------
+function randomFun(params) {
+    
+    return new Promise(function(resolve, reject) {
+        let complete = true;  
+        if(complete){
+            resolve("i am fulfilled");
+        }
+        else{
+            reject("i am rejected");
+        }
+        })
+}
+console.log(randomFun());
+
+// // ------------------------------------
+function randomFun(params) {
+    
+    return new Promise(function(resolve, reject) {
+        let complete = true;  
+       setTimeout(() => {
+        if(complete){
+            resolve("i am fulfilled");
+        }
+        else{
+            reject("i am rejected");
+        }
+        })
+       }, 3000);
+}
+
+randomFun()
+  .then((message) => {
+    console.log(message); 
+  })
+  .catch((message) => {
+    console.log(message); 
+  });
+console.log(randomFun());
+
+
 --------------------------------------------------------------------------------------------------------------------------------------
   <h1>Users</h1>
     <div id="main">
