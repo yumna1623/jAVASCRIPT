@@ -1,14 +1,32 @@
-// ----------------------------------------------------FRGMENTS---------------------------------------------------
-function video()
-{
-  return(
-    // <>
-    <img>
-    <div></div>
-     // </> these use when we have 2 objects side a by side so they need a parent
-  )  
-}
+*********************************************************************************************** MOUNTING
 
+When a component is created and added to the DOM.
+Example: Rendering a <Video /> component for the first time.
+          When a component mounts:
+Constructor (if used) runs (for class components).
+useEffect hooks with no dependency array ([]) or empty dependencies run once after the component is rendered.
+The component becomes visible in the DOM.
+
+*********************************************************************************************** UPDATING
+
+When a component’s state or props change, causing React to re-render it.
+
+*********************************************************************************************** UNMOUNTING
+When a component unmounts:
+
+React removes it from the DOM.
+Cleanup functions inside useEffect are executed to "clean up" resources like:
+Intervals (setInterval)
+Subscriptions
+Event listeners
+Other side effects
+The component is no longer part of the UI.
+***************** 
+***************** 
+***************** 
+***************** 
+*****************
+  
 -------------------------------------------------HOW TO EXPORT TWO COMPONENTS AT A TIME------------------------
 Components.js
 const ComponentA = () => {
