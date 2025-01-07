@@ -1,3 +1,6 @@
+*********************************************************************************************** 
+No dependency array: The effect runs after every render.
+Empty dependency array: The effect runs once after the component is mounted.
 *********************************************************************************************** MOUNTING
 
 When a component is created and added to the DOM.
