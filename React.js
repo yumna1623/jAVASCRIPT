@@ -2,17 +2,13 @@
 --------State Hooks:
 useState
 useReducer
-
 ----------Context Hooks 
 useContext
-
 ----------Ref Hooks 
 useRef
 useImparativeHandle
-
 ----------Effect Hooks 
 useEffect
-
 ----------Performance Hooks 
 useMemo
 useCallBack
@@ -30,6 +26,8 @@ Empty dependency array: The effect runs once after the component is mounted.
 *********************************************************************************************** MOUNTING
 
 When a component is created and added to the DOM.
+render = when component is created(mounting)
+re-rendering = when state change
 Example: Rendering a <Video /> component for the first time.
          When a component mounts:
 Constructor (if used) runs (for class components).
