@@ -1,11 +1,37 @@
+******************************************************************************************** HOOKS
+--------State Hooks:
+useState
+useReducer
+
+----------Context Hooks 
+useContext
+
+----------Ref Hooks 
+useRef
+useImparativeHandle
+
+----------Effect Hooks 
+useEffect
+
+----------Performance Hooks 
+useMemo
+useCallBack
+********************************************************************************************  Use useImperativeHandle
+
+To expose a child's ref to the parent, you use React.forwardRef and useImperativeHandle in the child component.
+This is why we use useImperativeHandle to explicitly define what the parent can access in a functional component.
+Without useImperativeHandle, the parent only gets the default behavior of the ref.
+          
 *********************************************************************************************** 
+          
 No dependency array: The effect runs after every render.
 Empty dependency array: The effect runs once after the component is mounted.
+          
 *********************************************************************************************** MOUNTING
 
 When a component is created and added to the DOM.
 Example: Rendering a <Video /> component for the first time.
-          When a component mounts:
+         When a component mounts:
 Constructor (if used) runs (for class components).
 useEffect hooks with no dependency array ([]) or empty dependencies run once after the component is rendered.
 The component becomes visible in the DOM.
