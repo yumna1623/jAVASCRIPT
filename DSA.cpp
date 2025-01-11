@@ -1,37 +1,39 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div class="parent">
-      <h1>Welcome To This Quiz</h1>
-      <div id="question">
-        <h1>Question # 01</h1>
-        <div id="quesAns"></div>
-        <button type="button" onclick="next()" class="btn btn-dark">Next</button>
-    </div>
-    </div>
-    <div class="score">Score: <span id="score">0</span></div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+</head>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="app.js"></script>
-  </body>
+<body>
+    <div class="parent">
+        <h1>Welcome To This Quiz</h1>
+        <div class="question">
+            <!-- <h1>Question # 01</h1> -->
+            <h1 id="question"></h1>
+            <div id="quesAns"> </div>
+            <button type="button" onclick="onPressNext()" class="btn btn-dark">Next</button>
+            
+            <p style="font-weight: 700; font-size: 24px;" id="score">Score : 0</div>
+
+        </div>
+    </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+</body>
+
 </html>
+
+
 *{
   margin: 0;
   padding: 0;
